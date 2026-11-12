@@ -20,6 +20,12 @@ and a suggested fix.
 Both pages are static and read-only, so they work on any deployment without a
 database or GitHub sign-in.
 
+## Screenshots
+
+| Dashboard | Pull request review |
+|---|---|
+| ![Dashboard](docs/screenshots/dashboard.png) | ![Pull request review](docs/screenshots/review.png) |
+
 ## Features
 
 - **GitHub OAuth** — one click, no personal access tokens to paste

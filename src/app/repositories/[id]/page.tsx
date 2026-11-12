@@ -4,6 +4,7 @@ import { GitFork, GitPullRequest, Lock, Star } from "lucide-react";
 
 import { AppHeader } from "@/components/AppHeader";
 import { PrStatusLabel, ReviewStatusBadge } from "@/components/badges";
+import { SyncReposButton } from "@/components/SyncReposButton";
 import { getSessionUser } from "@/lib/api-auth";
 import { prisma } from "@/lib/prisma";
 
@@ -104,12 +105,15 @@ export default async function RepositoryPage({
         </div>
 
         <section className="mt-10">
-          <h2 className="text-sm font-semibold uppercase tracking-[0.14em] text-slate-400">
-            Pull requests
-          </h2>
+          <div className="flex flex-wrap items-end justify-between gap-4">
+            <h2 className="text-sm font-semibold uppercase tracking-[0.14em] text-slate-400">
+              Pull requests
+            </h2>
+            <SyncReposButton />
+          </div>
 
           {repository.pullRequests.length === 0 ? (
-            <div className="mt-4 rounded-xl border border-dashed border-white/15 bg-white/[0.02] px-6 py-12 text-center">
+            <div className="panel mt-4 rounded-2xl border-dashed px-6 py-12 text-center">
               <GitPullRequest
                 className="mx-auto h-6 w-6 text-slate-500"
                 aria-hidden="true"
@@ -118,9 +122,9 @@ export default async function RepositoryPage({
                 No pull requests synced
               </h3>
               <p className="mx-auto mt-2 max-w-md text-sm text-slate-400">
-                Go back to the dashboard and run{" "}
-                <span className="font-medium text-slate-200">Sync from GitHub</span> to
-                import this repository&apos;s recent pull requests.
+                {repository.fullName === "Subhamdasskd/CodeReviewBuddy"
+                  ? "This repository has no pull requests on GitHub yet. Open one, then sync again."
+                  : "Run Sync from GitHub to import this repository's recent pull requests, then reload this page."}
               </p>
               <Link
                 href="/"
