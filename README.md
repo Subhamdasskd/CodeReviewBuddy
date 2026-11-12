@@ -1,5 +1,9 @@
 # CodeReview Buddy
 
+[![CI](https://github.com/Subhamdasskd/CodeReviewBuddy/actions/workflows/ci.yml/badge.svg)](https://github.com/Subhamdasskd/CodeReviewBuddy/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-34d399.svg)](LICENSE)
+[![Node](https://img.shields.io/badge/node-%3E%3D20.9-22d3ee.svg)](.nvmrc)
+
 AI-assisted code review and engineering intelligence for GitHub repositories.
 
 Sign in with GitHub, sync your repositories and pull requests, and get structured
@@ -151,3 +155,13 @@ src/
 - Reviews also run on sync and on demand, for repositories without a webhook.
 - Team analytics, custom rule sets, pattern memory, Slack/Jira and the VS Code
   extension from the PRD are not implemented.
+
+## Documentation
+
+| Document | Contents |
+|---|---|
+| [CONTRIBUTING.md](CONTRIBUTING.md) | Local setup, scripts, adding a rule, PR checklist |
+| [SECURITY.md](SECURITY.md) | Reporting vulnerabilities, deployment checklist |
+| [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) | Community expectations |
+| [CHANGELOG.md](CHANGELOG.md) | Release history |
+| [LICENSE](LICENSE) | MIT |
