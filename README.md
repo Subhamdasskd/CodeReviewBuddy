@@ -14,6 +14,8 @@ and a suggested fix.
 
 ## Try it without an account
 
+**Live:** <https://code-review-buddy-six.vercel.app/demo>
+
 - `/demo` — the dashboard with sample repositories
 - `/demo/review` — a sample pull request with findings
 
