@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="1200" height="320" role="img" aria-label="CodeReview Buddy">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#05070d"/>
+      <stop offset="0.55" stop-color="#071019"/>
+      <stop offset="1" stop-color="#0a1512"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#10b981"/>
+      <stop offset="1" stop-color="#06b6d4"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.2" cy="0.1" r="0.9">
+      <stop offset="0" stop-color="#10b981" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#10b981" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#10b981" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#34d399" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#22d3ee" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="320" rx="18" fill="url(#bg)"/>
+  <rect width="1200" height="320" rx="18" fill="url(#glow)"/>
+
+  <g stroke="#94a3b8" stroke-opacity="0.07">
+    <path d="M0 80 H1200 M0 160 H1200 M0 240 H1200"/>
+    <path d="M120 0 V320 M240 0 V320 M360 0 V320 M480 0 V320 M600 0 V320 M720 0 V320 M840 0 V320 M960 0 V320 M1080 0 V320"/>
+  </g>
+
+  <rect x="64" y="96" width="112" height="112" rx="26" fill="url(#accent)" opacity="0.95"/>
+  <g stroke="#04211a" stroke-width="9" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M108 132 L88 152 L108 172"/>
+    <path d="M132 132 L152 152 L132 172"/>
+    <path d="M126 128 L114 176"/>
+  </g>
+
+  <text x="212" y="152" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="50" font-weight="700" fill="#f8fafc">CodeReview Buddy</text>
+  <text x="212" y="192" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="21" fill="#94a3b8">AI-assisted code review for GitHub pull requests</text>
+
+  <g font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="15" fill="#a7f3d0">
+    <rect x="212" y="216" width="104" height="32" rx="16" fill="#34d399" fill-opacity="0.1" stroke="#34d399" stroke-opacity="0.3"/>
+    <text x="232" y="237">Next.js 16</text>
+    <rect x="328" y="216" width="118" height="32" rx="16" fill="#34d399" fill-opacity="0.1" stroke="#34d399" stroke-opacity="0.3"/>
+    <text x="348" y="237">PostgreSQL</text>
+    <rect x="458" y="216" width="86" height="32" rx="16" fill="#34d399" fill-opacity="0.1" stroke="#34d399" stroke-opacity="0.3"/>
+    <text x="478" y="237">Prisma</text>
+    <rect x="556" y="216" width="82" height="32" rx="16" fill="#34d399" fill-opacity="0.1" stroke="#34d399" stroke-opacity="0.3"/>
+    <text x="576" y="237">Vitest</text>
+  </g>
+
+  <rect x="64" y="288" width="1072" height="2" fill="url(#line)"/>
+</svg>

@@ -1,5 +1,7 @@
 # CodeReview Buddy
 
+![CodeReview Buddy](docs/banner.svg)
+
 [![CI](https://github.com/Subhamdasskd/CodeReviewBuddy/actions/workflows/ci.yml/badge.svg)](https://github.com/Subhamdasskd/CodeReviewBuddy/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-34d399.svg)](LICENSE)
 [![Node](https://img.shields.io/badge/node-%3E%3D20.9-22d3ee.svg)](.nvmrc)
