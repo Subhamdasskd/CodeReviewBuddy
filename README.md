@@ -6,6 +6,14 @@ Sign in with GitHub, sync your repositories and pull requests, and get structure
 review findings — security issues, bugs and style problems — with the file, the line
 and a suggested fix.
 
+## Try it without an account
+
+- `/demo` — the dashboard with sample repositories
+- `/demo/review` — a sample pull request with findings
+
+Both pages are static and read-only, so they work on any deployment without a
+database or GitHub sign-in.
+
 ## Features
 
 - **GitHub OAuth** — one click, no personal access tokens to paste
