@@ -36,6 +36,18 @@ database or GitHub sign-in.
 
 ## How the review works
 
+```mermaid
+flowchart LR
+    GH[GitHub] -->|OAuth| Auth[NextAuth]
+    GH -->|REST: repos + PR patches| Sync[sync.ts]
+    WH[Webhook] --> Sync
+    Sync --> DB[(PostgreSQL)]
+    Sync --> Engine[Review engine]
+    Engine -->|rules + optional AI| Findings[Findings]
+    Findings --> DB
+    DB --> UI[Dashboard / repository / PR pages]
+```
+
 1. The GitHub API returns each changed file with a unified diff patch.
 2. `src/services/review/diff.ts` parses the hunks and keeps only **added** lines,
    tracking the line number in the new version of the file.
