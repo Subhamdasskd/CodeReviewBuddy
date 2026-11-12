@@ -54,6 +54,7 @@ const LANGUAGE_COLORS: Record<string, string> = {
 };
 
 type RepositoryCardProps = {
+  href?: string;
   repository: {
     id: string;
     name: string;
@@ -68,7 +69,7 @@ type RepositoryCardProps = {
   };
 };
 
-export function RepositoryCard({ repository }: RepositoryCardProps) {
+export function RepositoryCard({ repository, href }: RepositoryCardProps) {
   const languageColor = repository.primaryLanguage
     ? (LANGUAGE_COLORS[repository.primaryLanguage] ?? "#94a3b8")
     : null;
@@ -81,7 +82,7 @@ export function RepositoryCard({ repository }: RepositoryCardProps) {
 
   return (
     <Link
-      href={`/repositories/${repository.id}`}
+      href={href ?? `/repositories/${repository.id}`}
       className="panel panel-hover group flex h-full flex-col rounded-2xl p-5"
     >
       <div className="flex items-start justify-between gap-3">

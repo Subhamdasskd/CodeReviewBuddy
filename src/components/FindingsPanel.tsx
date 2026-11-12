@@ -23,9 +23,11 @@ const SEVERITIES = ["critical", "high", "medium", "low", "info"] as const;
 export function FindingsPanel({
   findings,
   neverReviewed = false,
+  readOnly = false,
 }: {
   findings: FindingItem[];
   neverReviewed?: boolean;
+  readOnly?: boolean;
 }) {
   const [items, setItems] = useState(findings);
   const [filter, setFilter] = useState<string>("all");
@@ -153,21 +155,23 @@ export function FindingsPanel({
                   </span>
                 ) : null}
 
-                <button
-                  type="button"
-                  onClick={() => toggleDismiss(finding.id, !finding.isDismissed)}
-                  disabled={pendingId === finding.id}
-                  className="ml-auto inline-flex items-center gap-1 rounded-md border border-white/10 px-2 py-1 text-[10px] font-medium text-slate-400 transition-colors hover:border-white/25 hover:text-slate-200 disabled:opacity-50"
-                >
-                  {pendingId === finding.id ? (
-                    <Loader2 className="h-3 w-3 animate-spin" aria-hidden="true" />
-                  ) : finding.isDismissed ? (
-                    <RotateCcw className="h-3 w-3" aria-hidden="true" />
-                  ) : (
-                    <X className="h-3 w-3" aria-hidden="true" />
-                  )}
-                  {finding.isDismissed ? "Restore" : "Dismiss"}
-                </button>
+                {!readOnly ? (
+                  <button
+                    type="button"
+                    onClick={() => toggleDismiss(finding.id, !finding.isDismissed)}
+                    disabled={pendingId === finding.id}
+                    className="ml-auto inline-flex items-center gap-1 rounded-md border border-white/10 px-2 py-1 text-[10px] font-medium text-slate-400 transition-colors hover:border-white/25 hover:text-slate-200 disabled:opacity-50"
+                  >
+                    {pendingId === finding.id ? (
+                      <Loader2 className="h-3 w-3 animate-spin" aria-hidden="true" />
+                    ) : finding.isDismissed ? (
+                      <RotateCcw className="h-3 w-3" aria-hidden="true" />
+                    ) : (
+                      <X className="h-3 w-3" aria-hidden="true" />
+                    )}
+                    {finding.isDismissed ? "Restore" : "Dismiss"}
+                  </button>
+                ) : null}
               </div>
 
               {finding.filePath ? (
